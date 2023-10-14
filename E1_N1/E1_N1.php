@@ -13,6 +13,9 @@ class Empleado{
      public function initialize($nom,$sou) {
         $this->nom = $_POST['nom'];
         $this->sou = $_POST['sou'];
+
+    
+
      }
 
     // public function __construct(){

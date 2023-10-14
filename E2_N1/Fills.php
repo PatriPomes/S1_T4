@@ -16,7 +16,6 @@ class Rectangle extends Shape{
    }
  }   
 
-
     $triangle1=new Triangle(2,5);
     $triangle1->area_triangle();
 echo"<br>";
