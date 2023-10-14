@@ -22,17 +22,20 @@ class PokerDice{
              echo "En l'ultima tirada ha sortit: ". $this->lastThrow;
         }
     }
-    public function moltsDaus($totalThrows=5){
-        $tirada_list=[];
-        $index=1;
-        for ($cont=0; $cont<$totalThrows; $cont++) {
-           $tirada_list[]= $this->throw (); 
+    public function moltsDaus($daus=5){
+       $dau='';
+        
+        for ($cont=0; $cont<$daus; $cont++) {
+            $dau.="Dau ".($cont+1).": ".$this->throw ().'<br>'; 
+               
         }
-        foreach ($tirada_list as $dado ){
-        echo "Dau ".($index++).": ".$dado.'<br>';
-            }
+        self::$totalThrows=1;
+       return $dau;
     }
+       
+    
     public static function  getTotalThrows(){
+        
         return self::$totalThrows;
     }
 }
@@ -48,9 +51,9 @@ class PokerDice{
     echo '<br>';
     echo $tirada->shapeName();
     echo '<br>';
-    $tirada->moltsDaus(5);
+    echo $tirada->moltsDaus(5);
         
     echo "Número total de tirades: " . PokerDice::getTotalThrows();
     
-
+ 
 ?>
