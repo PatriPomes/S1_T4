@@ -51,8 +51,12 @@ class PokerDice{
     echo '<br>';
     echo $tirada->shapeName();
     echo '<br>';
+    echo "Número total de tirades: " . PokerDice::getTotalThrows();
+    echo '<br>';
+    echo '<br>';
+    echo 'Ara tirem 5 daus a la vegada:';
+    echo '<br>';
     echo $tirada->moltsDaus(5);
-        
     echo "Número total de tirades: " . PokerDice::getTotalThrows();
     
  
